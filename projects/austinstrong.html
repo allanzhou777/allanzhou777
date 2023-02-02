@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="allan">
+  <meta name="author" content="Allan Zhou">
+  
+  <title>Allan Zhou</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="\photos\apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" href="\photos\favicon.png">
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700;6..96,800;6..96,900&family=Limelight&family=Noto+Serif:wght@700&family=Unkempt&display=swap" rel="stylesheet"> -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- Custon stylesheet -->
+  <link rel="stylesheet" type="text/css" media="all" href="\assets\Website.css">
+
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/9bf3252fb8.js" crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;500&family=Mulish&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,600;1,900&family=Poppins:wght@400;600&family=Unkempt&display=swap');
+</style>
+<script>
+  $(function (){
+    // code here
+    var image = $("#menu").find('img').attr('src');
+    console.log(image);
+    $("#menu a").mouseover(function(){
+      var currentImage = $(this).attr('data-image');
+      $(this).parent().parent().parent().find('img').attr("src", currentImage);
+      $("#menu img").css("opacity", "1");
+    });  
+    $("#menu a").mouseout(function () {
+      $("#menu img").css("opacity", "0");
+      var currentImage = $(this).attr('background-image');
+      $(this).parent().parent().parent().find('img').attr("src", currentImage);
+      $("#menu img").css("opacity", "0.5");
+    });
+  });
+
+</script>
+
+
+
+<body>
+  <main>
+
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-brand" href="#">AZ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <!-- item -->
+            <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="/pages/Projects.html">Projects</a>
+            </li>
+            <!-- item -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Arts
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/pages/arts/cello.html">Cello</a>
+                <a class="dropdown-item" href="/pages/arts/photography.html">Photography</a>
+                <a class="dropdown-item" href="/pages/arts/visual.html">Visual Arts</a>
+              </div>
+            </li>
+            <!-- item -->
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation" href="/pages/about.html">About</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- begin content -->
+
+    <div class="bannerimage">
+      <div class="container">
+        <h3 class="bannertext">AustinStrong</h3>
+      </div>
+    </div>
+
+    <div class="section" style="background-color:aquamarine">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 detail-holder">
+
+            <div class="details">
+              <div class="minihead">Project</div>
+              <div class="mini-info">AustinStrong</div>
+            </div>
+
+            <div class="details">
+              <div class="minihead">Partners</div>
+              <a href="https://austinchineseamericannetwork.org/" class="mini-info" target="_blank">ACAN</a><br>
+              <a href="https://sites.google.com/eanesisd.net/westlakenhs/about" class="mini-info"  target="_blank">WHS NHS</a>
+            </div>
+
+            <div class="details">
+              <a href="https://austinstrong.square.site/"  target="_blank">
+                <button type="button" class=" btn project-btn" style ="background-color: red;">AustinStrong.com</button>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="col-md-9">
+            <div class="projectintro">
+              <h3>What, a 22 week long Spring Break?!?!</h3>
+              <p>In the summer of 2020, I co-founded the AustinStrong summer program with a friend to help children of ages 5-10 through COVID. I started by teaching basic life skills, like counting change and reading an analog clock. As the children grew more comfortable, I let the children start their own activities, from gardening to music concerts, rock painting, and even yoga sessions. By the end of this summer program, our community couldn't have been closer.</p>
+              <p>Almost two dozen children attended each day of our 3 month long program, and more than 1,000 volunteer hours were documented. Not only did we help a large number of children through COVID, but I also gained valuable life skills, like effective leadership and communication.  However, this wouldn't been possible without the trust and support of sponsors like ACAN.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    </div>
+
+    <section style="background-color:white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img class="lazyload" src="#">   
+            <!-- insert image here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- end content -->
+
+  </main>
+</body>
+</html>
