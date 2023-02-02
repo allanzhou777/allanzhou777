@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="allan">
+  <meta name="author" content="Allan Zhou">
+  
+  <title>Allan Zhou</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="\photos\apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" href="\photos\favicon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- Custon stylesheet -->
+  <link rel="stylesheet" type="text/css" media="all" href="\assets\Website.css">
+
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/9bf3252fb8.js" crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap&family=Inter&family=Montserrat:wght@300;400;500&family=Mulish&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,600;1,900&family=Poppins:wght@400;600&family=Unkempt&display=swap');
+</style>
+
+<script>
+  $(function (){
+    var image = $("#menu").find('img').attr('src');
+    console.log(image);
+    $("#menu a").mouseover(function(){
+      var currentImage = $(this).attr('data-image');
+      $(this).parent().parent().parent().find('img').attr("src", currentImage);
+      $("#menu img").css("opacity", "1");
+    });  
+    $("#menu a").mouseout(function () {
+      $("#menu img").css("opacity", "0");
+      var currentImage = $(this).attr('background-image');
+      $(this).parent().parent().parent().find('img').attr("src", currentImage);
+      $("#menu img").css("opacity", "0.5");
+    });
+  });
+</script>
+
+<body>
+  <main>
+
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-brand" href="\pages\index.html">AZ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <!-- item -->
+            <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="\pages\Projects.html">Projects</a>
+            </li>
+            <!-- item -->
+            <li class="nav-item ">
+              <a class="nav-link hover-underline-animation" href="\pages\creative.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Creative</a>
+            </li>
+            <!-- item -->
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation" href="\pages\about.html">About</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- begin content -->
+
+    <div class="container center-horizontal" id="menu">
+      <div class="row mx-auto">
+        <div class="col-12">
+          <img src="\photos\favicon.png" alt="">
+          <h1 class="main-title text-center ">Hi! I'm
+            <a href = "\pages\about.html" background-image="\photos\favicon.png" data-image="\photos\tallbuilding.jpg">[Allan Zhou]</a>. <br>I make
+            <a href = "\pages\Projects.html" background-image="\photos\favicon.png" data-image="\photos\paul.jpg">[stuff]</a>. For myself,<br>others, and just for
+            <a href = "\pages\creative.html" background-image="\photos\favicon.png" data-image="\photos\astronaut-pizza.jpg">[fun]</a></h1>
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <!-- end content -->
+
+  </main>
+</body>
+</html>
